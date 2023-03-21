@@ -1,0 +1,21 @@
+//wap to swap two variables using concept of call by value and call by refgernce
+#include<stdio.h>
+void swapbyvalue(int a,int b);
+void swapbyref(int *a,int *b);
+int main() {
+    int x,y;
+    scanf("%d%d",&x,&y);
+    printf("before swap:x=%d y=%d\n",x,y);
+    swapbyvalue(x,y);
+    printf("after swap by value:x=%d,y=%d\n",x,y);
+    swapbyref(&x,&y);
+    printf("after swapbyrefernce:x=%d y=%d\n",x,y);
+}
+void swapbyvalue(int a,int b){
+    int temp =a; a=b; b=temp;
+}
+void swapbyref(int *a ,int *b){
+    int temp =*a;*a=*b;*b=temp;
+}
+ 
+ //
